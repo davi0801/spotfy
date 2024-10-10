@@ -19,7 +19,7 @@ body {
 
 .sidebar {
     width: 300px;
-    background-color: #121212;
+    background-color: #242424;
     padding: 10px;
     padding-bottom: 90px;
     display: flex;
@@ -37,6 +37,9 @@ body {
     gap: 18px;
 }
 
+.nav-libary p:hover{
+background-color: #0400fc;
+}
 .nav-libary i, .nav-libary p {
  color: #B7B3B6;
  font-size: 14px;
@@ -72,7 +75,7 @@ body {
 }
 
 .nav-footer a {
-    color: #a7a7a7;
+    color: #ffffff;
     text-decoration: none;
     font-size: 12px;
     margin-right: 12px;
@@ -81,8 +84,8 @@ body {
 
 .nav-lang-button {
     background-color: transparent;
-    border: 1px solid #ffffff;
-    color: #fff;
+    border: 1px solid hsl(0, 0%, 100%);
+    color: #ffffff;
     padding: 8px 12px;
     margin-top: 16px;
     cursor: pointer;
@@ -93,7 +96,7 @@ main {
     padding: 24px;
     flex-grow: 1;
     overflow-y: auto;
-   
+  
 }
 
 .search-bar {
@@ -108,7 +111,7 @@ main {
 .search-bar input {
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #ffffff;
     width: 100%;
     margin-left: 10px;
     outline: none;
@@ -134,7 +137,7 @@ main {
 }
 
 .artist-card:hover, .album-card:hover{
-    background-color: #282828;
+    background-color: #05036b;
     
 }
 
@@ -167,7 +170,7 @@ color: #B7B3B6;
     bottom: 0;
     right: 0;
     left: 0;
-    background: linear-gradient( 90deg, #af2896, #509bf5);
+    background: linear-gradient( 90deg, #000000, #0400fc);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,9 +187,19 @@ font-size: 10px;
 
 .banner button {
     border-radius: 20px;
-    color: #000;
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
     font-weight: 600;
     cursor: pointer;
+    background-color: #000;
+}
+
+.nav-podcast button:hover, .nav-playlist button:hover {
+
+    background-color: #0400fc;
+}
+
+body {
+    background: linear-gradient( 90deg, #000000, #0400fc);
 }
