@@ -1,24 +1,24 @@
+const botoesArtistas = document.querySelectorAll('.artista');
 
-function tocaSom (idElementoAudio) {
-    document.querySelector(idElementoAudio).play();
+// Função para pausar todas as músicas
+function pausarTodasMusicas() {
+    const audios = document.querySelectorAll('audio');
+    audios.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0; // Opcional: reseta a música ao início
+    });
 }
- 
-const listaDeArtistas = document.querySelectorAll('artista');
 
-//para
-for (let artista = 0; artista < Artistas.length; artista++) {
+// Adiciona evento de clique em cada botão de artista
+botoesArtistas.forEach(botao => {
+    botao.addEventListener('click', () => {
+        // Pausa todas as músicas antes de tocar a nova
+        pausarTodasMusicas();
 
-    const artista = Artistas[som-artista];
-    const instrumento = som-artista.classList[1];
-    const idAudio = `#som_${som-artista}`; //template string
-
-  tecla.onclick = function (){
-        tocaSom(idAudio);
-    }
-
-    tecla.onkeydown = function(evento){
+        // Seleciona o elemento <audio> dentro do botão clicado
+        const audio = botao.querySelector('auio');
         
-    };
-}
-    
-    
+        // Toca a música
+        audio.play();
+    });
+});
